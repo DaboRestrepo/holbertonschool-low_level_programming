@@ -1,6 +1,6 @@
 #include <stdio.h>
-/**
- * main: rama principal. 
+/*
+ * main: rama principal.
  * return: termina el programa.
  */
 
