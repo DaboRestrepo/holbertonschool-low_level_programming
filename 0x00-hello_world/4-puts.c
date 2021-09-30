@@ -1,8 +1,5 @@
 #include <stdio.h>
-/* Se trata de imprimir
- * la frase con el uso
- * de puts
- */
+/* Se trata de imprimir la frase con el uso de puts */
 
 int main(void)
 {
