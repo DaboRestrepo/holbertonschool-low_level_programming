@@ -1,5 +1,9 @@
 #include <stdio.h>
-/* Se trata de imprimir la frase con el uso de puts */
+/*
+ * main: rama principal. 
+ * 
+ * return: termina el programa.
+ */
 
 int main(void)
 {
