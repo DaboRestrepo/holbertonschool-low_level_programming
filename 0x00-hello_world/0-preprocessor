@@ -1,2 +1,2 @@
 #!/bin/bash
-bcc $CFILE > c
+bcc $CFILE -E -o c
