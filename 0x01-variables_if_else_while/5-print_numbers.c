@@ -6,11 +6,11 @@
  * Return: Always 0 (Success)
  */
 
-int main()
+int main(void)
 {
-char n;
+int n;
 for (n = 0; n < 10; n++)
 putchar(n);
-putchar('\n');
+putchar(10);
 return (0);
 }
