@@ -7,11 +7,13 @@
 
 int main(void)
 {
-char h[] = {"_putchar"};
-int a;
+char *h = "_putchar";
 
-for (a = 0 ; a <= 8 ; a++)
-_putchar(h[a]);
+while (*h)
+{
+_putchar(*h);
+h++;
+}
 _putchar('\n');
 return (0);
 }
