@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _abs - Número absoluto.
- *
+ * @a: integer.
  * Return: Always 0.
  */
 
