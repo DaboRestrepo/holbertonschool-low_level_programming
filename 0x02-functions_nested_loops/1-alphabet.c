@@ -7,11 +7,12 @@
 
 void print_alphabet(void)
 {
-char h[] = {"abcdefghijklmnopqrstuvwxyz"};
-int a;
+char *h = "abcdefghijklmnopqrstuvwxyz";
 
-for (a = 0 ; a <= 26 ; a++)
-
-_putchar(h[a]);
+while (*h)
+{
+_putchar(*h);
+h++;
+}
 _putchar('\n');
 }
