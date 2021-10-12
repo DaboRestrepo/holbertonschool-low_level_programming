@@ -9,7 +9,7 @@
 void print_rev(char *s)
 {
 int count = 0;
-char temp[1024];
+int pos;
 while (*(s + count))
 {
 count++;
