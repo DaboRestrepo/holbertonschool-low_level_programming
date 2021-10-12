@@ -25,7 +25,7 @@ else
 {
 c2 = c / 2;
 }
-for (p = c2; p < c; p++)
+for (p = c2; p <= c - 1; p++)
 {
 _putchar(str[p]);
 }
