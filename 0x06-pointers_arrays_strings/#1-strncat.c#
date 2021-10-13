@@ -21,8 +21,24 @@ m--;
 
 for (o = 0; o < n && src[o] != '\0'; o++)
 {
-dest[m + o] = src[o];
+dest[m + n] = src[o];char *_strncat(char *dest, char *src, int n)
+{
+int m = 0;
+int o;
+
+while (dest[m])
+{
+m++;
 }
-dest[m + o] = '\0';
+m--;
+
+for (o = 0; o < n && src[o] != '\0'; o++)
+{
+dest[m + n] = src[o];
+}
+return (dest);
+}
+
+}
 return (dest);
 }
