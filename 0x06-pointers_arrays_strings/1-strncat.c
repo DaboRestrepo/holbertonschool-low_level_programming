@@ -17,7 +17,7 @@ while (dest[m])
 {
 m++;
 }
-m--;
+
 
 for (o = 0; o < n && src[o] != '\0'; o++)
 {
