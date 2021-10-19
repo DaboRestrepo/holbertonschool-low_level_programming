@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+
 /**
  * _strchr - Imprimir el string desde c
  * @s: Puntero del string
@@ -7,17 +9,24 @@
  */
 
 
+
 char *_strchr(char *s, char c)
 {
 int pos = 0;
+int count = 0;
 
-for (pos = 0; s[pos]; pos++)
+while (s[count] != '\0')
+{
+count++;
+}
+count++;
+
+for (pos = 0; pos <= count; pos++)
 {
 if (s[pos] == c)
 {
 return (s + pos);
-break;
 }
 }
-return ('\0');
+return (NULL);
 }
