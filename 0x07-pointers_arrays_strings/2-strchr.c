@@ -19,7 +19,7 @@ s++;
 }
 else if (s[pos] == c)
 {
-return(s + pos);
+return (s + pos);
 }
 }
 return (s);
