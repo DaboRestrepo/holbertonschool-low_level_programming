@@ -22,5 +22,5 @@ else if (s[pos] == c)
 return (s + pos);
 }
 }
-return (s);
+return ('\0');
 }
