@@ -1,0 +1,29 @@
+#include "main.h"
+/**
+ * _strspn - Calcular el syze de accept
+ * @s: String a revisar
+ * @accept: Caracteres para comparar
+ * Return: size de accept
+ */
+
+unsigned int _strspn(char *s, char *accept)
+{
+unsigned int pos_s = 0;
+unsigned int pos_accept = 0;
+
+while (s[pos_s])
+{
+pos_accept = 0;
+while (accept[pos_accept])
+{
+if (accept[pos_accept] == s[pos_s])
+{
+return (sizeof (accept[pos_accept]));
+break;
+}
+pos_accept++;
+}
+pos_s++;
+}
+return (sizeof (s));
+}
