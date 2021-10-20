@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - check the code
+ * set_string - pasar un valor de un puntero a un char.
  * @s: doble puntero.
  * @to: string S1.
  * Return: Void.
