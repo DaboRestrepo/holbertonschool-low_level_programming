@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _prime - Encontrar el númeri primo.
+ * @n: número a evaluar.
+ * @y: variable para comparar
+ * Return: 0 si no es primo y 1 si sí.
  */
 
 int _prime(int n, int y)
@@ -24,10 +25,14 @@ return (1);
 return (_prime(n, y - 1));
 }
 
+/**
+ * is_prime_number - ¿n es un número primo?
+ * @n: número a evaluar.
+ * Return: 0 si no es primo y 1 si sí.
+ */
 
 int is_prime_number(int n)
 {
-
 return (_prime(n, n - 1));
 }
 
