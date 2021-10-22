@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  *
  *
@@ -10,23 +10,26 @@
 
 int main(int argc, char **argv)
 {
-int count, sum = 0;
-if (argc <= 1)
+int count = 0, sum = 0;
+
+while (argv[count])
 {
-printf("0\n");
+count++;
 }
-for (count = 0; count < argc; count++)
-{
 if (argc > 1)
 {
-sum = sum + atoi(argv[count]);
-printf("%d\n", sum);
+sum += atoi(argv[count]);
 }
-else if (argv[count] < 48 && argv[count] > 57)
+printf("%d\n", sum);
+
+if (argv[count] < 48 && argv[count] > 57 )
 {
-printf("ERROR\n");
+printf("Error\n");
 return (1);
 }
+else if (argc < 2)
+{
+printf("0\n");
 }
 return (0);
 }

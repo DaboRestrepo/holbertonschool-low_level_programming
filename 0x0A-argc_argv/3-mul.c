@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 {
 int count, mul = 1;
 
-if (argc > 1)
+if (argc == 3)
 {
 for (count = 1; count < argc; count++)
 {
@@ -20,7 +20,7 @@ mul *= atoi(argv[count]);
 }
 printf("%d\n", mul);
 }
-else if (argc <= 1)
+else if (argc < 3)
 {
 printf("Error\n");
 return (1);
