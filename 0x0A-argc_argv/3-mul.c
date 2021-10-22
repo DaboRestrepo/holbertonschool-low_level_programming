@@ -22,7 +22,7 @@ printf("%d\n", mul);
 }
 else if (argc <= 1)
 {
-printf("ERROR\n");
+printf("Error\n");
 return (1);
 }
 return (0);
