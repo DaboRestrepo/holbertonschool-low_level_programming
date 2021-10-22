@@ -13,10 +13,10 @@ int main(int argc, char **argv)
 int count, mul = 1;
 
 if (argc > 1)
-{	
+{
 for (count = 1; count < argc; count++)
 {
-mul = mul * atoi(argv[count]);
+mul *= atoi(argv[count]);
 }
 printf("%d\n", mul);
 }
