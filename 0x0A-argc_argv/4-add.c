@@ -3,33 +3,35 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- *
- *
- *
+ * main - Sumar los dígitos
+ * @argc: Cantidad.
+ * @argv: Elementos.
+ * Return: 1 si no es dígito y 0 si es exitoso.
  */
 
 int main(int argc, char **argv)
 {
-int count = 0, sum = 0;
+int count, i = 0, sum = 0;
 
-while (argv[count])
+if (argc < 2)
 {
-count++;
+printf("0\n");
 }
-if (argc > 1)
+else
 {
-sum += atoi(argv[count]);
-}
-printf("%d\n", sum);
-
-if (argv[count] < 48 && argv[count] > 57 )
+for (count = 1; count < argc; count++)
+{
+for (i = 0; i < count; i++)
+{
+if (isdigit(argv[count][i]) == 0)
 {
 printf("Error\n");
 return (1);
 }
-else if (argc < 2)
-{
-printf("0\n");
+}
+sum += atoi(argv[count]);
+}
+printf("%d\n", sum);
 }
 return (0);
 }
