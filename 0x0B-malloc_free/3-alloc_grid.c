@@ -23,10 +23,19 @@ return (NULL);
 for (i = 0; i < height; i++)
 {
 str[i] = malloc(sizeof(int) * width);
+if (str[i] == NULL)
+{
+for (j = 0; j < width; j++)
+{
+free(str[j]);
+}
+free(str);
+}
 for (j = 0; j < width; j++)
 {
 str[i][j] = 0;
 }
 }
+
 return (str);
 }
