@@ -50,7 +50,7 @@ for (s2_len = 0; s2[s2_len] != '\0'; s2_len++)
 {
 continue;
 }
-string = malloc(sizeof(char) * (s1_len + s2_len));
+string = malloc(sizeof(char) * ((s1_len + s2_len) + 1));
 if (string == NULL)
 {
 return (NULL);
