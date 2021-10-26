@@ -1,7 +1,8 @@
 #include <stdlib.h>
 /**
- *
- *
+ * _strdup - Duplicate a string with malloc
+ * @str: Pointer to the string.
+ * Return: Pointer to the new address.
  */
 
 char *_strdup(char *str)
