@@ -34,9 +34,13 @@ char *str_concat(char *s1, char *s2)
 char *string;
 int s1_len, s2_len;
 
-if (s1 == NULL || s2 == NULL)
+if (s1 == NULL)
 {
-string = "";
+s1 = "";
+}
+if (s2 == NULL)
+{
+s2 = "";
 }
 for (s1_len = 0; s1[s1_len] != '\0'; s1_len++)
 {
