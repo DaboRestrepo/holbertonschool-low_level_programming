@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "main.h"
 /**
  * malloc_checked - Alocar espacio en la memoria.
  * @b: Data.
@@ -7,10 +8,13 @@
 
 void *malloc_checked(unsigned int b)
 {
+void *ptr;
+
+ptr = malloc(b);
+
 if (ptr == NULL)
 {
 exit(98);
 }
-void *ptr = malloc(sizeof(b));
 return (ptr);
 }
