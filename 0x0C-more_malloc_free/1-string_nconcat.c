@@ -11,7 +11,6 @@ char *string;
 unsigned int len_s1, len_s2;
 unsigned int m, o;
 
-(void)m;
 if (s1 == NULL)
 {
 s1 = "";
@@ -36,20 +35,27 @@ if (string == NULL)
 return (NULL);
 }
 
-if (n > len_s2)
+for (m = 0; s1[m] != '\0'; m++)
 {
-for (m = 0; s2[m] != '\0'; len_s1++, m++)
+string[m] = s1[m];
+}
+
+if (n >= len_s2)
 {
-string[len_s1] = s2[m];
+for (o = 0; s2[o] != '\0'; o++)
+{
+string[m] = s2[o];
+m++;
 }
 }
 else
 {
-for (o = 0; o < n + len_s1; o++)
+for (o = 0; o < n; o++)
 {
-string[o] = s1[o];
+string[m] = s2[o];
+m++;
 }
 }
-string[o] = '\0';
+string[m] = '\0';
 return (string);
 }
