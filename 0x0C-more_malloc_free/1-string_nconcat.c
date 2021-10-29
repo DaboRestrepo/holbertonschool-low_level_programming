@@ -38,10 +38,9 @@ return (NULL);
 
 if (n > len_s2)
 {
-for (m = 0; s2[m] != '\0'; m++)
+for (m = 0; s2[m] != '\0'; len_s1++, m++)
 {
 string[len_s1] = s2[m];
-len_s1++;
 }
 }
 else
