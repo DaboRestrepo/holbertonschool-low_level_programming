@@ -19,7 +19,7 @@ printf("Name: (nil)\n");
 }
 else if (d->age == 0)
 {
-printf("Age: (nil)\n");
+printf("Age: 0\n");
 }
 else if (d->owner == NULL)
 {
