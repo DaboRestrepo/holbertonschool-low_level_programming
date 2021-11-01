@@ -1,10 +1,18 @@
-#include <stdio.h>
+#ifndef MAIN_H
+#define MAIN_H
 /**
- * struct og - structure of dog.
+ * struct dog - structure of dog.
+ * @name: it refers the name of the dog.
+ * @age: it refers the age of the dog.
+ * @owner: it refers the owner of the dog.
+ *
+ * Description: when the struct dog is call,
+ * the dog get name, age and owner.
  */
 struct dog
 {
-char *name; /* It refers to the name of the dog */
-float age; /* It refers to the age of the dog */
-char *owner; /* It refers to the owner of the dog */
+char *name;
+float age;
+char *owner;
 };
+#endif
