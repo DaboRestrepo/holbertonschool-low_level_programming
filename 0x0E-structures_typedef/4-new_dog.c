@@ -50,24 +50,25 @@ d = malloc(sizeof(dog_t));
 if (d == NULL)
 return(NULL);
 
-if (d)
+else
 {
 d->name = malloc(sizeof(char) * (_strlen(name) + 1));
-if (d->name)
+if (d->name == NULL)
 {
-d->owner = malloc(sizeof(char) * (_strlen(owner + 1)));
+free(d->name);
+return (NULL);
+}
+
+d->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+if (d->owner == NULL)
+{
+free(d->owner);
+return(NULL);
+}
+
 d->name = _strcpy(d->name, name);
 d->owner = _strcpy(d->owner, owner);
 d->age = age;
-return (d);
 }
-else
-{
-free (d->name);
-free (d);
-return (NULL);
-}
-}
-
 return (d);
 }
