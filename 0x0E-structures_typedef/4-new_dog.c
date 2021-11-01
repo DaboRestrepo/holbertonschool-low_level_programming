@@ -28,6 +28,7 @@ d->owner = malloc(sizeof(char) * _strlen(owner));
 _strcpy(d->name, name);
 _strcpy(d->owner, owner);
 d->age = age;
+return (d);
 }
 else
 {
