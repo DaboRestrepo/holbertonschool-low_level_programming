@@ -21,10 +21,10 @@ d = malloc(sizeof(dog_t));
 
 if (d)
 {
-d->name = malloc(sizeof(char) * _strlen(name));
+d->name = malloc(sizeof(char) * (_strlen(name) + 1));
 if (d->name)
 {
-d->owner = malloc(sizeof(char) * _strlen(owner));
+d->owner = malloc(sizeof(char) * (_strlen(owner + 1)));
 _strcpy(d->name, name);
 _strcpy(d->owner, owner);
 d->age = age;
