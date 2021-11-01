@@ -2,20 +2,9 @@
 #include <stdio.h>
 #include "dog.h"
 /**
- * new_dog - Create a new dog
- * @name: first statment
- * @age: second statment
- * @owner: third statment
- * Return: Null if fail, string if success.
- *
  * _strlen - calculate the lenght of the string.
  * @s: string
  * Return: the lenght
- *
- * _strcpy - make a copy of the string
- * @dest: Destiny of the string
- * @src: surce of the string
- * Return: dest
  */
 
 int _strlen(char *s)
@@ -29,6 +18,12 @@ count++;
 return (count);
 }
 
+/**
+ * _strcpy - copiar el contenido de una array.
+ * @dest: Destino de contenido
+ * @src: fuente del contenido
+ * Return: dest
+ */
 
 char *_strcpy(char *dest, char *src)
 {
@@ -47,6 +42,13 @@ dest[m] = src[m];
 return (dest);
 }
 
+/**
+ * new_dog - Create a new dog
+ * @name: first statment
+ * @age: second statment
+ * @owner: third statment
+ * Return: Null if fail, string if success.
+ */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -54,7 +56,7 @@ dog_t *d;
 
 d = malloc(sizeof(dog_t));
 if (d == NULL)
-return(NULL);
+return (NULL);
 
 else
 {
@@ -70,7 +72,7 @@ if (d->owner == NULL)
 {
 free(d->name);
 free(d);
-return(NULL);
+return (NULL);
 }
 
 d->name = _strcpy(d->name, name);
