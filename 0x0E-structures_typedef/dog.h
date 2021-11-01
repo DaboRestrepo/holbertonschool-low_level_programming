@@ -18,7 +18,7 @@ char *owner;
 };
 
 /**
- * got_t - new name of the struct dog.
+ * dog_t - new name of the struct dog.
  */
 
 typedef struct dog dog_t;
