@@ -6,12 +6,41 @@
  * @name: first statment
  * @age: second statment
  * @owner: third statment
+ * Return: Null if fail, string if success.
  *
- * Return: Null if fail and d if success
+ * _strlen - calculate the lenght of the string.
+ * @s: string
+ * Return: the lenght
+ *
+ * _strcpy - make a copy of the string
+ * @dest: Destiny of the string
+ * @src: surce of the string
+ * Return: dest
  */
 
-int _strlen(char *s);
-char *_strcpy(char *dest, char *src);
+int _strlen(char *s)
+{
+int count = 0;
+
+while (s[count])
+{
+count++;
+}
+return (count);
+}
+
+
+char *_strcpy(char *dest, char *src)
+{
+int m = 0;
+
+for (; src[m]; m++)
+{
+dest[m] = src[m];
+}
+return (dest);
+}
+
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -34,31 +63,9 @@ else
 {
 free (d->name);
 free (d);
+return (NULL);
 }
 }
 
 return (d);
 }
-
-int _strlen(char *s)
-{
-int count = 0;
-
-while (s[count])
-{
-count++;
-}
-return (count);
-}
-
-char *_strcpy(char *dest, char *src)
-{
-int index;
-
-for (index = 0; src[index]; index++)
-{
-dest[index] = src[index];
-}
-return (dest);
-}
-
