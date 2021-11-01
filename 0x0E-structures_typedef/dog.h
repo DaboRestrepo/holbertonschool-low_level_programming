@@ -10,12 +10,12 @@
  * Description: when the struct dog is call,
  * the dog get name, age and owner.
  */
-struct dog
+typedef struct dog
 {
 char *name;
 float age;
 char *owner;
-};
+} dog;
 
 /**
  * dog - new name of the struct dog.
