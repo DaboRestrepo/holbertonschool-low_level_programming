@@ -15,14 +15,11 @@ dog_t *d;
 
 d = malloc(sizeof(dog_t));
 if (d == NULL)
-{
 return (NULL);
-}
-else
-{
+
 d->name = name;
 d->age = age;
 d->owner = owner;
-}
+
 return (d);
 }
