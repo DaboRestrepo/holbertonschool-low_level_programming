@@ -15,7 +15,7 @@ if (d->name == NULL)
 {
 printf("Name: (nil)\n");
 }
-else if (d->age == '\0')
+else if (d->age == 0)
 {
 printf("Age: (nil)\n");
 }
