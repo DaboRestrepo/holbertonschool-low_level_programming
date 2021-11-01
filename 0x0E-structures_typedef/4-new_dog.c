@@ -33,8 +33,14 @@ return (count);
 char *_strcpy(char *dest, char *src)
 {
 int m = 0;
+int count = 0;
 
-for (; src[m]; m++)
+while (src[count])
+{
+count++;
+}
+
+for (; m <= count; m++)
 {
 dest[m] = src[m];
 }
