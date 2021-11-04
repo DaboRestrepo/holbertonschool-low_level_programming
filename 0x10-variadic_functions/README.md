@@ -1,0 +1,1 @@
+Use of vagrants functions
