@@ -17,7 +17,7 @@ va_start(ap, n);
 for (; index < n; index++)
 {
 printf("%i", va_arg(ap, int));
-if (*separator && index < n - 1)
+if (separator && index < n - 1)
 {
 printf("%s", separator);
 }
