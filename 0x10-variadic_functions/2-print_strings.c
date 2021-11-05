@@ -19,17 +19,19 @@ va_start(ap, n);
 
 for (; index < n; index++)
 {
-
 str = va_arg(ap, char *);
-printf("%s", str);
 
+if (str)
+{
+printf("%s", str);
+}
+else
+{
+printf("(nil)");
+}
 if (separator && index < n - 1)
 {
 printf("%s", separator);
-}
-if (str == NULL)
-{
-printf("(nil)");
 }
 }
 va_end(ap);
