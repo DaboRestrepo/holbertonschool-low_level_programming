@@ -29,9 +29,9 @@ printf("%s%f", separator, va_arg(ap, double));
 break;
 case 's':
 str = (va_arg(ap, char *));
-printf("%s%s", separator, str);
 if (!str)
-printf("(nil)");
+str = "(nil)";
+printf("%s%s", separator, str);
 break;
 default:
 index++;
