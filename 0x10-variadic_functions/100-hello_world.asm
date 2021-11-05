@@ -6,12 +6,13 @@ main:
 mov rax, 1
 mov rdi, 1
 mov rsi, msg
-mov rdx, 17
+mov rdx, msglen
 syscall
 
 mov rax, 60
-mov rdi, rdi
+mov rdi, 0
 syscall
 
 section .mens
-msg: db "Hello, world", 10
+msg: db "Hello, World", 10
+msglen: equ $ - msg
