@@ -30,7 +30,7 @@ break;
 case 's':
 str = (va_arg(ap, char *));
 printf("%s%s", separator, str);
-if (!(str))
+if (!str)
 printf("(nil)");
 break;
 default:
