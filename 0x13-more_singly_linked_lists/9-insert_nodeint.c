@@ -12,9 +12,11 @@ unsigned int idx, int n)
 	listint_t *new = NULL, *h = NULL;
 	unsigned int i = 1;
 
+	if (head == NULL)
+		return (NULL);
 	h = *head;
 	new = malloc(sizeof(listint_t));
-		if (new == NULL)
+	if (new == NULL)
 		return (NULL);
 	new->n = n;
 	if (idx == 1)
@@ -24,7 +26,7 @@ unsigned int idx, int n)
 		return (&*new);
 	}
 
-	for (; h->next != NULL && i < idx - 1; i++)
+	for (; h->next != NULL && i <= idx; i++)
 	{
 		h = h->next;
 	}
