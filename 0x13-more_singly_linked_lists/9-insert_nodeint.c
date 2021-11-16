@@ -26,7 +26,7 @@ unsigned int idx, int n)
 		return (&*new);
 	}
 
-	for (; i <= idx; i++)
+	for (; i < idx; i++)
 	{
 		if (h->next == NULL)
 			return (NULL);
