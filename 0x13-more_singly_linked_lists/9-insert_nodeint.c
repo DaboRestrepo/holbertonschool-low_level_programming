@@ -26,8 +26,10 @@ unsigned int idx, int n)
 		return (&*new);
 	}
 
-	for (; h->next != NULL && i <= idx; i++)
+	for (; i <= idx; i++)
 	{
+		if (h->next == NULL)
+			return (NULL);
 		h = h->next;
 	}
 	new->next = h->next;
