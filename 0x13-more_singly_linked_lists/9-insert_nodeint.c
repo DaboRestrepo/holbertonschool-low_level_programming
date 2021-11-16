@@ -18,10 +18,10 @@ unsigned int idx, int n)
 	if (idx == 0)
 	{
 		new->next = h;
-		h = new;
+		*head = new;
 		return (new);
 	}
-	if (head == NULL)
+	if (h == NULL)
 		return (NULL);
 	for (i = 0; i < idx - 1; i++)
 	{
