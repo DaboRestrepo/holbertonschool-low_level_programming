@@ -7,7 +7,7 @@ int main(void)
 {
 	long int m = 0, n = 1, o = 0, sum = 0, count = 0;
 
-	for (; count < 50; count++)
+	for (; count < 33; count++)
 	{
 		o = m + n;
 		m = n;
