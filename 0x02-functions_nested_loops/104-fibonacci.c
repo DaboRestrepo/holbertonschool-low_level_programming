@@ -8,11 +8,11 @@ int main(void)
 	float m = 0, n = 1, o = 0;
 	int count = 0;
 
-	for (; count < 98; count++)
+	for (; count <= 98; count++)
 	{
 		o = m + n;
 		printf("%.0f", o);
-		if (count == 97)
+		if (count == 98)
 			break;
 		printf(", ");
 		m = n;
