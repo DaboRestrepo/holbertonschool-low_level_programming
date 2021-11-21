@@ -18,28 +18,30 @@ void print_times_table(int n)
 			p = (m * o);
 			if (o != 0)
 			{
-				putchar(',');
-				putchar(' ');
+				_putchar(',');
+				_putchar(' ');
 			}
 			if (p > 9 && p < 100)
 			{
-				putchar(' ');
-				putchar((p / 10) + '0');
-				putchar((p % 10) + '0');
+				_putchar(' ');
+				_putchar((p / 10) + '0');
+				_putchar((p % 10) + '0');
 			}
 			else if (p >= 100)
 			{
-				putchar((p / 100) + '0');
-				putchar((p / 10) % 10 + '0');
-				putchar((p % 10) + '0');
+				_putchar((p / 100) + '0');
+				_putchar((p / 10) % 10 + '0');
+				_putchar((p % 10) + '0');
+			}
+			else if (p < 10 && o != 0)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar((p % 10) + '0');
 			}
 			else
-			{
-				putchar(' ');
-				putchar(' ');
-				putchar((p % 10) + '0');
-			}
+				_putchar((p % 10) + '0');
 		}
-	putchar('\n');
+	_putchar('\n');
 	}
 }
