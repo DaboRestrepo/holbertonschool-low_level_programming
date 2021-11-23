@@ -7,20 +7,23 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;/* File descriptor */
-	/*int index;*/
-	char buf[1024];
-	ssize_t num_bytes;
+	int fd;
+	char *buf;
+	ssize_t num_bytes, res;
+
+	buf = malloc(letters);
+	if (buf == NULL || filename == NULL)
+		return (0);
 
 	fd = open(filename, O_RDONLY);
-
-	if (fd == -1 || filename == NULL)
+	if (fd == -1)
+	{
+		free(buf);
 		return (0);
-
+	}
 	num_bytes = read(fd, buf, letters);
-	write(fd, buf, letters);
+	res = write(fd, buf, num_bytes);
 	close(fd);
-	if (num_bytes == 0 || letters != (size_t)num_bytes)
-		return (0);
-	return (num_bytes);
+
+	return (res);
 }
