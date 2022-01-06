@@ -5,14 +5,15 @@
  */
 int main(void)
 {
-	float m = 0, n = 1, o = 0;
+	float m = 1, n = 2, o = 0;
 	int count = 0;
 
-	for (; count <= 98; count++)
+	printf("1, 2, ");
+	for (; count <= 96; count++)
 	{
 		o = m + n;
 		printf("%.0f", o);
-		if (count == 98)
+		if (count == 96)
 			break;
 		printf(", ");
 		m = n;
