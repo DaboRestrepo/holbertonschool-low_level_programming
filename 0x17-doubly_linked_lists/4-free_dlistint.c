@@ -1,16 +1,18 @@
 #include "lists.h"
 /**
- * @brief 
- * 
+ * free_dlistint - free the double list.
+ * @head: Head of the list.
+ * Return: Nothing. 
  */
 void free_dlistint(dlistint_t *head)
 {
-    dlistint_t *tmp = NULL;
+	dlistint_t *tmp = NULL;
+	dlistint_t *next = NULL;
 
-    while (head != NULL)
-    {
-        tmp = head;
-        head = head->next;
-        free(tmp);
-    }
+	while (head)
+	{
+		tmp = head;
+		head = head->next;
+		free(tmp);
+	}
 }
