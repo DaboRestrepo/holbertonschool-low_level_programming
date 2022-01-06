@@ -2,7 +2,7 @@
 /**
  * free_dlistint - free the double list.
  * @head: Head of the list.
- * Return: Nothing. 
+ * Return: Nothing.
  */
 void free_dlistint(dlistint_t *head)
 {
