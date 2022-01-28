@@ -55,14 +55,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(value, current->value) == 0)
 				return (1);
-			free(current->value);
-			current->value = malloc(sizeof(strlen(value) + 1));
-			if (current->value == NULL)
-			{
-				free(current->value);
-				return (0);
-			}
-			current->value = strdup(value);
+			strcpy(ht->array[index]->value, value)
+			return (1);
 		}
 		current = current->next;
 	}
