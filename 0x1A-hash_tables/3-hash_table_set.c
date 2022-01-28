@@ -34,8 +34,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (strlen(key) == 0 || !ht || !ht->array || !ht->size)
 		return (0);
-	item = pair(key, value);
 	index = key_index((unsigned char *)key, ht->size);
+	item = pair(key, value);
 
 	while (ht)
 	{
@@ -46,8 +46,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(key, current_item->key) == 0)
 			{
-				if (strcmp(value, current_item->value) == 0)
-					return (1);
 				strcpy(ht->array[index]->value, value);
 				return (1);
 			}
