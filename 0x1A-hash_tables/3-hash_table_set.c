@@ -41,31 +41,27 @@ hash_node_t *pair(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *current = NULL;
+	hash_node_t *current_item = NULL, *item = NULL;
 	int index = 0;
 
-	if (key == NULL || ht == NULL)
+	if (strlen(key) == 0 || !ht || !ht->array || !ht->size)
 		return (0);
-	current = pair(key, value);
+	index = key_index((unsigned char *)key, ht->size);
+	item = pair(key, value);
+	current_item = ht->array[index];
+
+	if (current_item == NULL)
+		ht->array[index] = item;
 	/* Si existe current en la hash table */
-	while (current)
+	while(current_item)
 	{
-		if (strcmp(key, current->key) == 0)
+		if (strcmp(key, current_item->key) == 0)
 		{
-			if (strcmp(value, current->value) == 0)
+			if (strcmp(value, current_item->value) == 0)
 				return (1);
 			strcpy(ht->array[index]->value, value);
 			return (1);
 		}
-		current = current->next;
-	}
-	/* Si no existe current en la Hash Table */
-	index = key_index((unsigned char *)key, ht->size);
-	current = ht->array[index];
-	if (!current)
-	{
-		current->next = ht->array[index];
-		ht->array[index] = current;
 	}
 	return (1);
 }
