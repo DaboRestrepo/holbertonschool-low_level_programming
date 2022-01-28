@@ -44,7 +44,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *nodo_pair = NULL, *current;
 	int index = 0;
 
-	index = key_index((unsigned char *)key, ht->size);
 	current = ht->array[index];
 	if (key == NULL || ht == NULL)
 		return (0);
@@ -61,6 +60,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current = current->next;
 	}
 	/* Si no existe current en la Hash Table */
+	index = key_index((unsigned char *)key, ht->size);
 	if (!current)
 	{
 		nodo_pair = pair(key, value);
