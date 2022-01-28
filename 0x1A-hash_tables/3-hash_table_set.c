@@ -34,15 +34,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (strlen(key) == 0 || !ht || !ht->array || !ht->size)
 		return (0);
-	index = key_index((unsigned char *)key, ht->size);
 	item = pair(key, value);
-	current_item = ht->array[index];
+	index = key_index((unsigned char *)key, ht->size);
 
-	if (current_item == NULL)
-		ht->array[index] = item;
 	/* Si existe current en la hash table */
 	while (current_item)
 	{
+		current_item = ht->array[index];
+		if (current_item == NULL)
+			ht->array[index] = item;
 		if (strcmp(key, current_item->key) == 0)
 		{
 			if (strcmp(value, current_item->value) == 0)
