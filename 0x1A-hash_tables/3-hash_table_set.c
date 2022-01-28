@@ -30,7 +30,7 @@ hash_node_t *pair(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *current_item = NULL, *item = NULL;
-	int index = 0;
+	unsigned long int index = 0;
 
 	if (strlen(key) == 0 || !ht || !ht->array || !ht->size)
 		return (0);
