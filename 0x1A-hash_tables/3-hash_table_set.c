@@ -53,7 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (current_item == NULL)
 		ht->array[index] = item;
 	/* Si existe current en la hash table */
-	while(current_item)
+	while (current_item)
 	{
 		if (strcmp(key, current_item->key) == 0)
 		{
