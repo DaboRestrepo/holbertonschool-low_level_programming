@@ -37,18 +37,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((unsigned char *)key, ht->size);
 	item = pair(key, value);
 
-	while (ht)
+	current_item = ht->array[index];
+	if (current_item == NULL)
+		ht->array[index] = item;
+	while (current_item)
 	{
-		current_item = ht->array[index];
-		if (current_item == NULL)
-			ht->array[index] = item;
+		if (strcmp(key, current_item->key) == 0)
+		{
+			strcpy(ht->array[index]->value, strdup(value));
+			free(item);
+			return (1);
+		}
 		else
 		{
-			if (strcmp(key, current_item->key) == 0)
-			{
-				strcpy(ht->array[index]->value, value);
-				return (1);
-			}
+			item->next = current_item;
+			current_item = item;
+			return (1); 
 		}
 	}
 	return (1);
