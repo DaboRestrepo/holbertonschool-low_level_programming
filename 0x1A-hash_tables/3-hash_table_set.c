@@ -37,18 +37,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	item = pair(key, value);
 	index = key_index((unsigned char *)key, ht->size);
 
-	/* Si existe current en la hash table */
-	while (current_item)
+	while (ht)
 	{
 		current_item = ht->array[index];
 		if (current_item == NULL)
 			ht->array[index] = item;
-		if (strcmp(key, current_item->key) == 0)
+		else
 		{
-			if (strcmp(value, current_item->value) == 0)
+			if (strcmp(key, current_item->key) == 0)
+			{
+				if (strcmp(value, current_item->value) == 0)
+					return (1);
+				strcpy(ht->array[index]->value, value);
 				return (1);
-			strcpy(ht->array[index]->value, value);
-			return (1);
+			}
 		}
 	}
 	return (1);
