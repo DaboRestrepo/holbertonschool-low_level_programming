@@ -13,7 +13,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	while (ht->array[index] != NULL && ht->array[index]->key != NULL &&
 	strcmp(key, ht->array[index]->key) != 0)
 		ht->array[index] = ht->array[index]->next;
-	if (ht->array[index] == NULL)
+	if (ht->array[index] == NULL || ht->array[index]->key == NULL ||
+	strcmp(key, ht->array[index]->key) != 0)
 		return (NULL);
 	else
 		return (ht->array[index]->value);
