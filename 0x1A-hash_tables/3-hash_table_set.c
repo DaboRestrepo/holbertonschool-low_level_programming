@@ -14,6 +14,18 @@ hash_node_t *pair(const char *key, const char *value)
 		free(nodo_pair);
 		return (NULL);
 	}
+	nodo_pair->key = malloc(sizeof(strlen(key) + 1));
+	if (nodo_pair->key == NULL)
+	{
+		free(nodo_pair->key);
+		return (NULL);
+	}
+	nodo_pair->value = malloc(sizeof(strlen(value) + 1));
+	if (nodo_pair->value == NULL)
+	{
+		free(nodo_pair->value);
+		return (NULL);
+	}
 	nodo_pair->key = strdup(key);
 	nodo_pair->value = strdup(value);
 	nodo_pair->next = NULL;
